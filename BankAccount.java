@@ -1,6 +1,3 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -91,32 +88,34 @@ class Account {
         return Account_Holder;
     }
 
-    public void saveaccount(String name){
-         try {
-            File file = new File(name);
-            if(file.createNewFile()){
-                System.out.println("File Created" + file.getName());
-            } else {
-                System.out.println("File already Exist.");
-            }
+    // public void saveaccount(String name){
+    //      try {
+    //         File file = new File(name);
+    //         if(file.createNewFile()){
+    //             System.out.println("File Created" + file.getName());
+    //         } 
+    //         FileWriter fw = new FileWriter(file.true);
+    //         fw.write("Name "+ name );
+            
+           
             
             
-        } catch (IOException e) {
-            System.out.println("An Error occurred");
-            e.printStackTrace();
-        }
-    }
+    //     } catch (IOException e) {
+    //         System.out.println("An Error occurred");
+    //         e.printStackTrace();
+    //     }
+    // }
 
    public void savetransaction(double amount) {
-    try {
-        FileWriter writer = new FileWriter("new.txt", true); // append mode
-        writer.write("Transaction Amount: Rs. " + amount + "\n");
-        writer.close();
-        System.out.println("Successfully Written!");
-    } catch (IOException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
-    }
+    // try {
+    //     FileWriter writer = new FileWriter("new.txt", true); // append mode
+    //     writer.write("Transaction Amount: Rs. " + amount + "\n");
+    //     writer.close();
+    //     System.out.println("Successfully Written!");
+    // } catch (IOException e) {
+    //     System.out.println("An error occurred.");
+    //     e.printStackTrace();
+    // }
 }
 
 }
@@ -160,7 +159,7 @@ public class BankAccount {
                   System.out.print("Enter amount to deposit: ");
                   double dep = in.nextDouble();
                  account.deposit(dep);
-                  account.saveaccount(name);
+                 // account.saveaccount(name);
                    account.savetransaction(dep);
                   break;
                 case 2:
